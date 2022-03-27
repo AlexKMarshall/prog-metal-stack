@@ -1,3 +1,5 @@
+import '../app/styles/sass-output/main.css'
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
