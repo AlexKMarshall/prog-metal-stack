@@ -16,7 +16,7 @@
     "dev:remix": "cross-env NODE_ENV=development binode --require ./mocks -- @remix-run/dev:remix dev",
     "format": "prettier --write .",
     "generate:tailwind": "tailwindcss -o ./app/styles/tailwind.css",
-    "generate:saas": "sass scss:app/styles/sass-output",
+    "generate:sass": "sass scss:app/styles/sass-output",
     "postinstall": "remix setup node",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "setup": "nprm run docker:up && prisma migrate dev && prisma db seed",
