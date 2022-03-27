@@ -1,6 +1,6 @@
 # Remix Indie Stack
 
-![The Remix Prog Metal Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+![The Remix Prog Metal Stack](https://user-images.githubusercontent.com/48052439/161312932-8a4c7514-5e09-420d-8e68-722b98bc20e3.png)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
