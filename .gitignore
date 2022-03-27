@@ -18,3 +18,4 @@ node_modules
 /app/styles/sass-output/
 
 /coverage
+*.log
