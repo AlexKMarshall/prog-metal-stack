@@ -11,8 +11,7 @@ npx create-remix --template AlexKMarshall/prog-metal-stack
 ## What's in the stack
 
 - [Vercel app deployment](https://vercel.com)
-- Production-ready [Postgres Database](https://postgresql.org) with [Docker](https://www.docker.com/)
-<!-- - Healthcheck endpoint for [Fly backups region fallbacks](https://fly.io/docs/reference/configuration/#services-http_checks) -->
+- [Postgres Database](https://postgresql.org) with [Supabase](https://supabase.io/)
 - [GitHub Actions](https://github.com/features/actions) for deploy on merge to production and staging environments
 - Email/Password Authentication with [cookie-based sessions](https://remix.run/docs/en/v1/api/remix#createcookiesessionstorage)
 - Database ORM with [Prisma](https://prisma.io)
