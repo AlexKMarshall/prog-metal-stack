@@ -17,6 +17,7 @@ npx create-remix --template AlexKMarshall/prog-metal-stack
 - Database ORM with [Prisma](https://prisma.io)
 - Styling with [Tailwind](https://tailwindcss.com/) and/or [SASS](https://sass-lang.com)
 - End-to-end testing with [Cypress](https://cypress.io)
+- Visual component development with [Storybook](https://storybook.io)
 - Local third party request mocking with [MSW](https://mswjs.io)
 - Unit testing with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com)
 - Code formatting with [Prettier](https://prettier.io)
