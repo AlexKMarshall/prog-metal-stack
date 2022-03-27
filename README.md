@@ -57,11 +57,9 @@ This is a pretty simple note-taking app, but it's a good example of how you can 
 
 ## Deployment
 
-This Remix Stack comes with two GitHub Actions that handle automatically deploying your app to production and staging environments.
+This Remix Stack comes with a GitHub Action that handles automatically migrating your database.
 
 Prior to your first deployment, you'll need to do a few things:
-
-- [Install Fly](https://fly.io/docs/getting-started/installing-flyctl/)
 
 - Sign up and log in to Vercel
 
@@ -73,13 +71,19 @@ Prior to your first deployment, you'll need to do a few things:
 
 - Link Vercel to your repository
 
-- Add a `SESSION_SECRET` to your Vercel app environment variables each of production, development and preview environments
+- Add a `SESSION_SECRET` to your Vercel app environment variables for production and preview environments
 
-Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
+- Sign up to [Supabase](https://app.supabase.io/) and create a project.
+
+- Add a `PRODUCTION_DATABASE_URL` action secret to your github repo
+
+- Add a `DATABASE_URL` secret to your Vercel settings just for the production environment
+
+Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a migration of your database and every commit to other branches will build a preview deployment on Vercel.
 
 ## GitHub Actions
 
-We use GitHub Actions for continuous integration and deployment. Anything that gets into the `main` branch will be deployed to production after running tests/build/etc. Anything in the `dev` branch will be deployed to staging.
+We use GitHub Actions for continuous integration and deployment. Anything that gets into the `main` branch will be deployed to production after running tests/build/etc.
 
 ## Testing
 
