@@ -66,14 +66,14 @@ export default function Index() {
           <div className="flex flex-wrap justify-center gap-8 mt-6">
             {[
               {
-                src: 'https://user-images.githubusercontent.com/1500684/157764397-ccd8ea10-b8aa-4772-a99b-35de937319e1.svg',
-                alt: 'Fly.io',
-                href: 'https://fly.io',
+                src: 'https://raw.githubusercontent.com/github/explore/3c66f1237835e0b877190fbea528d0ebece7bccf/topics/vercel/vercel.png',
+                alt: 'Vercel',
+                href: 'https://vercel.com',
               },
               {
-                src: 'https://user-images.githubusercontent.com/1500684/157764395-137ec949-382c-43bd-a3c0-0cb8cb22e22d.svg',
-                alt: 'SQLite',
-                href: 'https://sqlite.org',
+                src: 'https://raw.githubusercontent.com/github/explore/f4ec5347a36e06540a69376753a7c37a8cb5a136/topics/supabase/supabase.png',
+                alt: 'Supabase',
+                href: 'https://supabase.io',
               },
               {
                 src: 'https://user-images.githubusercontent.com/1500684/157764484-ad64a21a-d7fb-47e3-8669-ec046da20c1f.svg',
