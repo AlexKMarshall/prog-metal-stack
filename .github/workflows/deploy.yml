@@ -91,6 +91,12 @@ jobs:
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
 
+      - name: 🐳 Docker compose
+        # the sleep is just there to give time for postgres to get started
+        run: docker-compose up -d && sleep 3
+        env:
+          DATABASE_URL: 'postgresql://postgres:postgres@localhost:5432/postgres'
+
       - name: 🛠 Setup Database
         run: npx prisma migrate reset --force
 
@@ -101,9 +107,9 @@ jobs:
         uses: cypress-io/github-action@v3
         with:
           start: npm run start:mocks
-          wait-on: "http://localhost:8811"
+          wait-on: 'http://localhost:8811'
         env:
-          PORT: "8811"
+          PORT: '8811'
 
   # build:
   #   name: 🐳 Build
