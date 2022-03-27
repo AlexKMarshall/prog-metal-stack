@@ -70,6 +70,9 @@ jobs:
       - name: ⚡ Run vitest
         run: npm run test -- --coverage
 
+      - name: 📃 Report coverage
+        uses: codecov/codecov-action@v1
+
   cypress:
     name: ⚫️ Cypress
     runs-on: ubuntu-latest
