@@ -1,5 +1,5 @@
 {
-  "name": "indie-stack-template",
+  "name": "prog-metal-stack-template",
   "private": true,
   "description": "",
   "license": "",
@@ -19,7 +19,7 @@
     "generate:sass": "sass scss:app/styles/sass-output",
     "postinstall": "remix setup node",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "setup": "nprm run docker:up && prisma migrate dev && prisma db seed",
+    "setup": "npm run docker:up && prisma migrate dev && prisma db seed",
     "start": "cross-env NODE_ENV=production remix-serve build",
     "test": "vitest",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 \"cypress open\"",
