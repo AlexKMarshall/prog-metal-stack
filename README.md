@@ -1,6 +1,6 @@
 # Remix Indie Stack
 
-![The Remix Prog Metal Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
+![The Remix Prog Metal Stack](https://user-images.githubusercontent.com/48052439/161312932-8a4c7514-5e09-420d-8e68-722b98bc20e3.png)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
@@ -11,8 +11,7 @@ npx create-remix --template AlexKMarshall/prog-metal-stack
 ## What's in the stack
 
 - [Vercel app deployment](https://vercel.com)
-- Production-ready [Postgres Database](https://postgresql.org) with [Docker](https://www.docker.com/)
-<!-- - Healthcheck endpoint for [Fly backups region fallbacks](https://fly.io/docs/reference/configuration/#services-http_checks) -->
+- [Postgres Database](https://postgresql.org) with [Supabase](https://supabase.io/)
 - [GitHub Actions](https://github.com/features/actions) for deploy on merge to production and staging environments
 - Email/Password Authentication with [cookie-based sessions](https://remix.run/docs/en/v1/api/remix#createcookiesessionstorage)
 - Database ORM with [Prisma](https://prisma.io)
@@ -57,11 +56,9 @@ This is a pretty simple note-taking app, but it's a good example of how you can 
 
 ## Deployment
 
-This Remix Stack comes with two GitHub Actions that handle automatically deploying your app to production and staging environments.
+This Remix Stack comes with a GitHub Action that handles automatically migrating your database.
 
 Prior to your first deployment, you'll need to do a few things:
-
-- [Install Fly](https://fly.io/docs/getting-started/installing-flyctl/)
 
 - Sign up and log in to Vercel
 
@@ -73,13 +70,19 @@ Prior to your first deployment, you'll need to do a few things:
 
 - Link Vercel to your repository
 
-- Add a `SESSION_SECRET` to your Vercel app environment variables each of production, development and preview environments
+- Add a `SESSION_SECRET` to your Vercel app environment variables for production and preview environments
 
-Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a deployment to your production environment, and every commit to your `dev` branch will trigger a deployment to your staging environment.
+- Sign up to [Supabase](https://app.supabase.io/) and create a project.
+
+- Add a `PRODUCTION_DATABASE_URL` action secret to your github repo
+
+- Add a `DATABASE_URL` secret to your Vercel settings just for the production environment
+
+Now that everything is set up you can commit and push your changes to your repo. Every commit to your `main` branch will trigger a migration of your database and every commit to other branches will build a preview deployment on Vercel.
 
 ## GitHub Actions
 
-We use GitHub Actions for continuous integration and deployment. Anything that gets into the `main` branch will be deployed to production after running tests/build/etc. Anything in the `dev` branch will be deployed to staging.
+We use GitHub Actions for continuous integration and deployment. Anything that gets into the `main` branch will be deployed to production after running tests/build/etc.
 
 ## Testing
 
