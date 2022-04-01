@@ -1,7 +1,12 @@
 node_modules
 
+.cache
+.vercel
+.output
+
 /build
 /public/build
+/api/index.js
 .env
 
 /cypress/screenshots
