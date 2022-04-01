@@ -1,4 +1,4 @@
-# Remix Indie Stack
+# Remix Prog Metal Stack
 
 ![The Remix Prog Metal Stack](https://user-images.githubusercontent.com/48052439/161312932-8a4c7514-5e09-420d-8e68-722b98bc20e3.png)
 
